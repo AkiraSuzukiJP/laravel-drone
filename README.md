@@ -21,29 +21,29 @@ $ make npm-install
 $ make npm-dev
 
 ## vue.js環境構築設定
-docker-compose exec web npm vue
-docker-compose exec web npm vue-router
+//docker-compose exec web npm vue
+//docker-compose exec web npm vue-router
 
 ## モデル作成
-php artisan make:model -m Aircraft
-php artisan make:model -m Pilot
-php artisan make:model -m Inspector
-php artisan make:model -m InspectionRrecord
-php artisan make:model -m FlightRecord
+docker-compose exec app php artisan make:model -m Aircraft
+docker-compose exec app php artisan make:model -m Pilot
+docker-compose exec app php artisan make:model -m Inspector
+docker-compose exec app php artisan make:model -m InspectionRrecord
+docker-compose exec app php artisan make:model -m FlightRecord
 
 ## seeder作成
-php artisan make:seeder FlightRecordTableSeeder
-php artisan make:seeder InspectionRecordTableSeeder
-php artisan make:seeder PilotTableSeeder
-php artisan make:seeder InspectorTableSeeder
-php artisan make:seeder AircraftTableSeeder
+docker-compose exec app php artisan make:seeder FlightRecordTableSeeder
+docker-compose exec app php artisan make:seeder InspectionRecordTableSeeder
+docker-compose exec app php artisan make:seeder PilotTableSeeder
+docker-compose exec app php artisan make:seeder InspectorTableSeeder
+docker-compose exec app php artisan make:seeder AircraftTableSeeder
 
 ## controller作成
-php artisan make:controller PilotController
-php artisan make:controller InspectorController
-php artisan make:controller AircraftController
-php artisan make:controller FlightRecordController
-php artisan make:controller InspectionRrecordController
+docker-compose exec app php artisan make:controller PilotController
+docker-compose exec app php artisan make:controller InspectorController
+docker-compose exec app php artisan make:controller AircraftController
+docker-compose exec app php artisan make:controller FlightRecordController
+docker-compose exec app php artisan make:controller InspectionRrecordController
 
 ```
 
